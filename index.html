@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JPG to PDF: Convert JPG, JPEG, PNG, WebP Gif into PDF Online Free</title>
-    <meta name="description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpeg, jpg, png, webp, and gif and more." />
+    <title>JPG to PDF: Convert JPG, PNG, WebP GIF into PDF Online Free</title>
+    <meta name="description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpg, png, webp, and gif and more." />
     <meta name="keywords" content="jpg to pdf, image to pdf, png to pdf, webp to pdf, images to pdf, image to pdf coverter" />
-    <meta property="og:title" content="JPG to PDF: Convert JPG, JPEG, PNG, WebP Gif into PDF Online Free" />
+    <meta property="og:title" content="JPG to PDF: Convert JPG, PNG, WebP GIF into PDF Online Free" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jpgintopdf.github.io/" />
     <meta property="og:image" content="https://jpgintopdf.github.io/static/images/site-image.png" />
     <meta property="og:site_name" content="GitHub Pages" />
-    <meta property="og:description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpeg, jpg, png, webp, and gif and more." />
+    <meta property="og:description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpg, png, webp, and gif and more." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://jpgintopdf.github.io/" />
@@ -21,6 +21,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://jpgintopdf.github.io/static/css/main.min.css?v=67ebbac8a412c" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <script>
+        var ga_send_event = ( event_name ) => {
+        	if( typeof gtag == 'function' ){
+        		gtag( 'event', event_name, {event_name:event_name} );
+        	}
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -147,13 +154,13 @@
                         </div>
 
                         <div class="d-block mt-2 mb-2">
-                            <button id="convertBtn" class="btn btn-primary btn-md w-100 rounded-2 shadow-sm mb-2">
+                            <button id="convertBtn" class="btn btn-primary btn-md w-100 rounded-2 shadow-sm mb-2" onclick="ga_send_event('convert_to_pdf')">
                                 <i class="fas fa-file-pdf me-2"></i> Convert to PDF
                             </button>
-                            <button id="downloadBtn" class="btn btn-success btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;">
+                            <button id="downloadBtn" class="btn btn-success btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;" onclick="ga_send_event('download_pdf')">
                                 <i class="fas fa-download me-2"></i> Download PDF
                             </button>
-                            <button id="resetBtn" class="btn btn-outline-danger btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;">
+                            <button id="resetBtn" class="btn btn-outline-danger btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;" onclick="ga_send_event('reset_click')">
                                 <i class="fas fa-trash-alt me-2"></i> Reset
                             </button>
                         </div>
