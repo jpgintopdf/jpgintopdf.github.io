@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JPG to PDF: Convert JPG, JPEG, PNG, WebP Gif into PDF Online Free</title>
+    <meta name="description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpeg, jpg, png, webp, and gif and more." />
+    <meta name="keywords" content="jpg to pdf, image to pdf, png to pdf, webp to pdf, images to pdf, image to pdf coverter" />
+    <meta property="og:title" content="JPG to PDF: Convert JPG, JPEG, PNG, WebP Gif into PDF Online Free" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jpgintopdf.github.io/" />
+    <meta property="og:image" content="https://jpgintopdf.github.io/static/images/site-image.png" />
+    <meta property="og:site_name" content="GitHub Pages" />
+    <meta property="og:description" content="JPG to PDF converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpeg, jpg, png, webp, and gif and more." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://jpgintopdf.github.io/" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="https://jpgintopdf.github.io/static/images/favicon.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://jpgintopdf.github.io/static/static/css/main.min.css?v=67ebbac8a412c" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-file-pdf"></i> JPGintoPDF
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#howToConvert">How to Convert</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="upload-container fade-in shadow-sm mt-4">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div id="dropArea" class="drop-area">
+                        <i class="fas fa-cloud-upload-alt pulse"></i>
+                        <div class="fw-bold fs-6">Drag & Drop Images Here</div>
+                        <button id="selectImagesBtn" class="btn btn-primary btn-md mt-3">
+                            <i class="fas fa-images"></i> Select Images
+                        </button>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                        <p class="mt-3 text-muted">Supports JPG, PNG, GIF, WEBP, and more</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div id="conversionContainer" class="mt-4" style="display: none;">
+            <div class="row g-3">
+                <div class="col-12 col-sm-12 col-md-8">
+                    <div id="imagesContainer" class="py-3 mb-3 bg-white shadow-sm p-3 rounded-4">
+                        <div class="col-12 mb-3">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="fs-6 fw-bold">Selected Images <span id="imageCount" class="ms-1 badge bg-primary rounded-pill p-1 fs-6 fw-normal">0</span></h3>
+                                <button class="btn btn-primary btn-sm" onclick="document.getElementById('selectImagesBtn').click()"><i class="fas fa-upload"></i> Add images</button>
+                            </div>
+                            <small class="text-muted">Drag to reorder images. Click the trash icon to remove.</small>
+                        </div>
+                        <div id="imageList" class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-auto justify-content-center g-3 sortable-list"></div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <div id="optionsContainer" class="shadow-sm rounded-4 p-3 bg-white">
+                        <h3 class="options-title fs-6 fw-bold"><i class="fas fa-cog me-2"></i>PDF Conversion Options</h3>
+                        <div class="row row-cols-1">
+                            <div class="col mb-3">
+                                <label for="pageOrientation" class="form-label">Page Orientation</label>
+                                <select class="form-select form-select-sm" id="pageOrientation">
+                                    <option value="portrait">Portrait</option>
+                                    <option value="landscape">Landscape</option>
+                                    <option value="auto">Auto (Match image orientation)</option>
+                                </select>
+                            </div>
+                            <div class="col mb-3">
+                                <label for="pageSize" class="form-label">Page Size</label>
+                                <select class="form-select form-select-sm" id="pageSize">
+                                    <option value="a4">A4 (210 × 297 mm)</option>
+                                    <option value="letter">Letter (8.5 × 11 in)</option>
+                                    <option value="legal">Legal (8.5 × 14 in)</option>
+                                    <option value="tabloid">Tabloid (11 × 17 in)</option>
+                                    <option value="auto">Auto (Match image size)</option>
+                                </select>
+                            </div>
+                            <div class="col mb-3">
+                                <label for="backgroundColor" class="form-label">Background Color</label>
+                                <input type="color" class="form-control form-control-sm form-control-color" id="backgroundColor" value="#ffffff">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="imagePosition" class="form-label">Image Position</label>
+                                <select class="form-select form-select-sm" id="imagePosition">
+                                    <option value="center">Center</option>
+                                    <option value="stretch">Stretch to fit</option>
+                                    <option value="top-left">Top Left</option>
+                                    <option value="top-right">Top Right</option>
+                                    <option value="bottom-left">Bottom Left</option>
+                                    <option value="bottom-right">Bottom Right</option>
+                                </select>
+                            </div>
+                            <div class="col mb-3">
+                                <label for="margin" class="form-label">Margin (mm)</label>
+                                <input type="range" class="form-range" id="margin" min="0" max="50" value="10">
+                                <div class="d-flex justify-content-between">
+                                    <small>0mm</small>
+                                    <small id="marginValue">10mm</small>
+                                    <small>50mm</small>
+                                </div>
+                            </div>
+                            <div class="col mb-3">
+                                <label for="pdfName" class="form-label">PDF File Name</label>
+                                <input type="text" class="form-control" id="pdfName" placeholder="output.pdf">
+                            </div>
+                        </div>
+
+                        <div id="progressContainer" class="progress-container">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Converting to PDF...</span>
+                                <span id="progressPercent">0%</span>
+                            </div>
+                            <div class="progress">
+                                <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="d-block mt-2 mb-2">
+                            <button id="convertBtn" class="btn btn-primary btn-md w-100 rounded-2 shadow-sm mb-2">
+                                <i class="fas fa-file-pdf me-2"></i> Convert to PDF
+                            </button>
+                            <button id="downloadBtn" class="btn btn-success btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;">
+                                <i class="fas fa-download me-2"></i> Download PDF
+                            </button>
+                            <button id="resetBtn" class="btn btn-outline-danger btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;">
+                                <i class="fas fa-trash-alt me-2"></i> Reset
+                            </button>
+                        </div>
+
+                    </div><!-- end options Container -->
+                </div><!-- end right sidebar -->
+            </div>
+        </div><!-- end conversion container -->
+
+        <section class="text-center py-5">
+            <h1 class="fw-bold">Convert JPG to PDF</h1>
+            <p><b>JPG to PDF</b> converter allows you to convert unlimited images into pdf without losing image quality. supported image formats: jpeg, jpg, png, webp, and gif and more.</p>
+
+            <p>Our jpg to pdf online converter tool is 100% free, you can convert unlimited images into high-quality pdf with customizable pdf settings. convert images to pdf as much as you need.</p>
+
+            <p>Convert your images into pdf in just a few clicks. Drag and drop or select images, adjust your pdf settings, then click convert and download converted file. super easy to use.</p>
+        </section>
+        <hr class="text-secondary" />
+        <section id="features" class="py-3">
+            <div class="mt-2 mb-5 text-center">
+                <h2 class="fw-bold fs-3">JPG to PDF Converter: Features</h2>
+                <p>Our free <b>JPG to PDF</b> online converter tool has robust features that convert your images into professional PDFs in seconds. Here are some features.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>High Quality PDFs</h3>
+                        <p>Convert your images to PDF without losing image quality and create high-resolution PDF documents that maintain perfect quality for printing and sharing.</p>
+                        <div class="d-flex align-items-center text-primary">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>Supports jpg, jpeg, png, webp, gif and more image format.</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card highlight-card floating">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Batch Processing</h3>
+                        <p>Convert unlimited images into PDF, Our tool supports multiple image conversion that converts your pictures into pdf efficiently.</p>
+                        <div class="d-flex align-items-center text-white">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>Recommended to convert 30 images at once for normal devices.</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Our jpg to pdf converter tool is optimized for all devices. This tool works on devices like desktops, mobile, tablets, etc., to enjoy the best user experience during conversion.</p>
+                        <div class="d-flex align-items-center text-primary">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>Works on any device</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Secure Processing</h3>
+                        <p>Your files are processed securely in your browser. we don't store your files in our servers, which means complete privacy for your documents and images.</p>
+                        <div class="d-flex align-items-center text-primary">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>100% client-side processing</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3>Arrange & Customize</h3>
+                        <p>Re-order selected images and adjust page size, orientation, margins, background color, and image position to create the perfect PDF for your needs.</p>
+                        <div class="d-flex align-items-center text-primary">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>Customize the PDF setting before converting.</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Fast and Free</h3>
+                        <p>Our jpg to pdf converter is optimized to convert your unlimited images into pdf quickly. Convert unlimited images as you need for free.</p>
+                        <div class="d-flex align-items-center text-primary">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <small>Up to 5x faster than competitors and 100% Free.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="howToConvert" class="py-5">
+            <div class="how-to-card">
+                <div class="floating-icons">
+                    <i class="floating-icon fas fa-file-pdf" style="top: 10%; left: 5%; font-size: 30px; animation-delay: 0s;"></i>
+                    <i class="floating-icon fas fa-image" style="top: 20%; left: 80%; font-size: 25px; animation-delay: 2s;"></i>
+                    <i class="floating-icon fas fa-cloud-upload-alt" style="top: 60%; left: 10%; font-size: 35px; animation-delay: 4s;"></i>
+                    <i class="floating-icon fas fa-download" style="top: 70%; left: 85%; font-size: 28px; animation-delay: 6s;"></i>
+                </div>
+                
+                <div class="card-header">
+                    <h2><i class="fas fa-magic me-2"></i> How to Convert JPG to PDF?</h2>
+                </div>
+                
+                <div class="card-body">
+                    <div class="how-to-badge">
+                        <i class="fas fa-bolt me-1"></i> Super Easy Steps
+                    </div>
+
+                    <p class="mb-4">Our online <strong>jpg to pdf</strong> converter is easy to use. Follow these 3 steps to convert your images to pdf.</p>
+                    
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Upload Your Images</h3>
+                            <p>Drag and drop your image files into to the drop zone above or click the <b>Select Images</b> button to select your image files. Supports JPG, PNG, GIF, WEBP, and more.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Arrange & Customize</h3>
+                            <p>Reorder images by drag-and-drop. Customize pdf setting, choose page size (A4, Letter, etc.), orientation (Portrait/Landscape), image position and and background color if needed.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="divider"></div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Convert & Download</h3>
+                            <p>Click <b>Convert to PDF</b> button and wait a few seconds, Then download your pdf by clicking the <b>Download PDF</b> button.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <h4 class="mb-4">Ready to Convert Images into PDF?</h4>
+                        <button class="cta-btn" onclick="document.getElementById('selectImagesBtn').click();window.scrollTo({top: 0,behavior: 'smooth'})">
+                            <span><i class="fas fa-play me-2"></i> Start Converting Now</span>
+                        </button>
+                        <p class="mt-3 text-muted"><i class="fas fa-lock me-1"></i> Your files are processed securely and never stored</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div><!-- end container -->
+</main>
+
+    <div class="toast-container"></div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-file-pdf me-2"></i>JPGintoPDF</h5>
+                    <p>A simple tool to convert your images to PDF files right in your browser. No server processing needed.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#features">Feature</a></li>
+                        <li><a href="/">JPG to PDF</a></li>
+                        <li><a href="#howToConvert">How to Convert</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://github.com/" rel="nofollow"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                        <li><a href="https://x.com/" rel="nofollow"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="https://www.facebook.com/" rel="nofollow"><i class="fab fa-facebook me-2"></i>Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 JPGintoPDF. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="https://jpgintopdf.github.io/static/js/main.min.js?v=67ebbac8a4414"></script>
+</body>
+</html>
