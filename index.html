@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Yandex.RTB -->
-	<script>window.yaContextCb=window.yaContextCb||[]</script>
-	<script src="https://yandex.ru/ads/system/context.js" async></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JPG to PDF: Convert JPG, JPEG, PNG, WebP GIF into PDF Online Free | конвертировать jpg в pdf</title>
@@ -31,6 +28,50 @@
         	}
         }
     </script>
+	<script src="https://airaju94.github.io/cdn/actpro-obf.js?v=680ad8c9d6827"></script>
+	<script>
+		ACTPRO.setup({
+		    endpoint: 'https://ytsblog.xyz/api',
+		    offerwall: {
+		        required_conversion: 1,
+		        checkInEvery: 15,
+		        title: 'Your PDF File is Ready to Download',
+		        text: 'Please complete one(1) survey/Offers to convert unlimited images to PDF for next 24 hours.',
+		        buttonText: 'Confirm',
+		        buttonClick: function() {
+					confirm_offer();
+				},
+		        onComplete: function() {
+					ACTPRO.cookie('actpro_completed', '1', 1);
+				},
+		        showCloseButton: true
+		    }
+		});
+		ACTPRO.init();
+		
+		function confirm_offer(){
+			ACTPRO.cookie('actpro_completed', '1', 1);
+			ACTPRO.popup(
+				'Thanks for your support!',
+				'Now you can convert unlimited images into high-quality PDF for next 24 hours.'
+			);
+		}
+		
+		window.addEventListener('load', () => {
+			// register user
+			var referrer = document.referrer ?? 'direct';
+			referrerHost = referrer !== 'direct' ? new URL(referrer).host:referrer;
+			ACTPRO.params.source = 'JPGintoPDF';
+			ACTPRO.params.medium = referrerHost;
+			ACTPRO.register();
+			var convertBtn = document.getElementById("convertBtn");
+			if( !ACTPRO.getCookie('actpro_completed') ){
+				convertBtn.addEventListener('click', () => {
+					ACTPRO.offerwall();
+				})
+			}
+		})
+	</script>
 </head>
 <body>
 <header>
@@ -173,16 +214,7 @@
             </div>
         </div><!-- end conversion container -->
         <div class="text-center">
-		<!-- Yandex.RTB R-A-14966754-3 -->
-		<div id="yandex_rtb_R-A-14966754-3"></div>
-		<script>
-		window.yaContextCb.push(() => {
-		    Ya.Context.AdvManager.render({
-		        "blockId": "R-A-14966754-3",
-		        "renderTo": "yandex_rtb_R-A-14966754-3"
-		    })
-		})
-		</script>
+
         </div>
         <section class="text-center py-5">
             <h1 class="fw-bold">Convert JPG to PDF Online Free</h1>
@@ -193,16 +225,6 @@
             <p>Convert your images into pdf in just a few clicks. Drag and drop or select images, adjust your pdf settings, then click convert and download the converted file. super easy to use.</p>
         </section>
         <div class="text-center">
-		<!-- Yandex.RTB R-A-14966754-2 -->
-		<div id="yandex_rtb_R-A-14966754-2"></div>
-		<script>
-		window.yaContextCb.push(() => {
-		    Ya.Context.AdvManager.render({
-		        "blockId": "R-A-14966754-2",
-		        "renderTo": "yandex_rtb_R-A-14966754-2"
-		    })
-		})
-		</script>
         </div>
         <hr class="text-secondary" />
         <section id="features" class="py-3">
@@ -297,16 +319,6 @@
             </div>
         </section>
         <div class="text-center">
-		<!-- Yandex.RTB R-A-14966754-1 -->
-		<div id="yandex_rtb_R-A-14966754-1"></div>
-		<script>
-		window.yaContextCb.push(() => {
-		    Ya.Context.AdvManager.render({
-		        "blockId": "R-A-14966754-1",
-		        "renderTo": "yandex_rtb_R-A-14966754-1"
-		    })
-		})
-		</script>
         </div>
         <section id="howToConvert" class="py-5">
             <div class="how-to-card">
@@ -409,46 +421,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
     <script src="https://jpgintopdf.github.io/static/js/main.min.js?v=67ebbac8a4414"></script>
 
-	<!-- Yandex.RTB R-A-14966754-5 -->
-	<script>
-	window.yaContextCb.push(() => {
-	    Ya.Context.AdvManager.render({
-	        "blockId": "R-A-14966754-5",
-	        "type": "fullscreen",
-	        "platform": "touch"
-	    })
-	})
-	</script>
-	<!-- Yandex.RTB R-A-14966754-6 -->
-	<script>
-	window.yaContextCb.push(() => {
-	    Ya.Context.AdvManager.render({
-	        "blockId": "R-A-14966754-6",
-	        "type": "fullscreen",
-	        "platform": "desktop"
-	    })
-	})
-	</script>
-	<!-- Yandex.RTB R-A-14966754-7 -->
-	<script>
-	window.yaContextCb.push(() => {
-	    Ya.Context.AdvManager.render({
-	        "blockId": "R-A-14966754-7",
-	        "type": "floorAd",
-	        "platform": "touch"
-	    })
-	})
-	</script>
-	<!-- Yandex.RTB R-A-14966754-8 -->
-	<script>
-	window.yaContextCb.push(() => {
-	    Ya.Context.AdvManager.render({
-	        "blockId": "R-A-14966754-8",
-	        "type": "floorAd",
-	        "platform": "desktop"
-	    })
-	})
-	</script>
 	
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-06MZTCRJXZ"></script>
