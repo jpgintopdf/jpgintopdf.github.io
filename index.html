@@ -51,6 +51,10 @@
 
 		function confirm_offer(){
 			ACTPRO.cookie('actpro_completed', '1', 1);
+			var closeBtn = document.querySelector('.actpro-close-btn');
+			if( closeBtn ){
+				closeBtn.click()
+			}
 			ACTPRO.popup(
 				'Thanks for your support!',
 				'Now you can convert unlimited images into high-quality PDF for 24 hours.'
