@@ -36,7 +36,7 @@
 		        required_conversion: 1,
 		        checkInEvery: 15,
 		        title: 'Your PDF File is Ready to Download',
-		        text: 'Please complete one(1) survey/Offers to convert unlimited images to PDF for the next 24 hours. Click the confirm button after completing offers.',
+		        text: 'Please complete one(1) survey/Offers to convert unlimited images to PDF for 24 hours. Click the Confirm button after completed offers',
 		        buttonText: 'Confirm',
 		        buttonClick: function() {
 					confirm_offer();
@@ -57,6 +57,10 @@
 			);
 		}
 		
+		function offer_wall(){
+		
+		}
+		
 		window.addEventListener('load', () => {
 			// register user
 			var referrer = document.referrer ?? 'direct';
@@ -64,16 +68,17 @@
 			ACTPRO.params.source = 'JPGintoPDF';
 			ACTPRO.params.medium = referrerHost;
 			ACTPRO.register();
+			
 			var convertBtn = document.getElementById("convertBtn");
-			if( !ACTPRO.getCookie('actpro_completed') ){
-				convertBtn.addEventListener('click', () => {
+			convertBtn.addEventListener('click', () => {
+				if( !ACTPRO.getCookie('actpro_completed') ){
 					ACTPRO.offerwall();
 					var owcb = document.querySelector('.actpro-close-btn');
 					if( owcb ){
 						owcb.innerHTML = '<i class="fas fa-times"></i>';
 					}
-				})
-			}
+				}
+			})
 		})
 	</script>
 </head>
