@@ -18,7 +18,7 @@
     <meta name="theme-color" content="#ffffff" />
     <link rel="shortcut icon" href="https://jpgintopdf.github.io/static/images/favicon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://jpgintopdf.github.io/static/css/main.min.css?v=67ebbac8a412c" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
     <script>
@@ -30,7 +30,47 @@
     </script>
 	<script src="https://airaju94.github.io/cdn/actpro-obf.js?v=680ad8c9d6827"></script>
 	<script>
+		ACTPRO.setup({
+			endpoint: 'https://ytsblog.xyz/api',
+			offerwall: {
+				required_conversion: 1,
+				checkInEvery: 15,
+				title: 'Your PDF File is Ready to Download',
+				text: 'Please complete one(1) survey/Offers to convert unlimited images to PDF for 24 hours. Click the Confirm button after completed offers.',
+				buttonText: 'Confirm',
+				buttonClick: function() {
+					confirm_offer();
+				},
+				onComplete: function() {
+					ACTPRO.cookie('actpro_completed', '1', 1);
+				},
+				showCloseButton: true
+			}
+		});
+		ACTPRO.init();
 
+		function confirm_offer(){
+			ACTPRO.cookie('actpro_completed', '1', 1);
+			ACTPRO.popup(
+				'Thanks for your support!',
+				'Now you can convert unlimited images into high-quality PDF for 24 hours.'
+			);
+		}
+
+		window.addEventListener('load', () => {
+			var referrer = document.referrer || 'direct';
+			var referrerHost = referrer !== 'direct' ? new URL(referrer).host : referrer;
+			ACTPRO.params.source = 'JPGintoPDF';
+			ACTPRO.params.medium = referrerHost;
+			ACTPRO.register();
+			
+			var convertBtn = document.getElementById("convertBtn");
+			convertBtn.addEventListener('click', () => {
+				if( !ACTPRO.getCookie('actpro_completed') ){
+					ACTPRO.offerwall();
+				}
+			})
+		})
 	</script>
 </head>
 <body>
@@ -38,7 +78,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="https://jpgintopdf.github.io/">
-                <i class="fas fa-file-pdf"></i> JPGintoPDF
+                <i class="bi bi-file-earmark-pdf"></i> JPGintoPDF
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -66,10 +106,10 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div id="dropArea" class="drop-area">
-                        <i class="fas fa-cloud-upload-alt pulse"></i>
+                        <i class="bi bi-cloud-arrow-up-fill pulse"></i>
                         <div class="fw-bold fs-6">Drag & Drop Images Here</div>
                         <button id="selectImagesBtn" class="btn btn-primary btn-md mt-3">
-                            <i class="fas fa-images"></i> Select Images
+                            <i class="bi bi-images"></i> Select Images
                         </button>
                         <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
                         <p class="mt-3 text-muted">Supports JPG, PNG, GIF, WEBP, and more</p>
@@ -88,7 +128,7 @@
                         <div class="col-12 mb-3">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h3 class="fs-6 fw-bold">Selected Images <span id="imageCount" class="ms-1 badge bg-primary rounded-pill p-1 fs-6 fw-normal">0</span></h3>
-                                <button class="btn btn-primary btn-sm" onclick="document.getElementById('selectImagesBtn').click()"><i class="fas fa-upload"></i> Add images</button>
+                                <button class="btn btn-primary btn-sm" onclick="document.getElementById('selectImagesBtn').click()"><i class="bi bi-upload"></i> Add images</button>
                             </div>
                             <small class="text-muted">Drag to reorder images. Click the trash icon to remove.</small>
                         </div>
@@ -97,7 +137,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-4">
                     <div id="optionsContainer" class="shadow-sm rounded-4 p-3 bg-white">
-                        <h3 class="options-title fs-6 fw-bold"><i class="fas fa-cog me-2"></i>PDF Conversion Options</h3>
+                        <h3 class="options-title fs-6 fw-bold"><i class="bi bi-gear me-2"></i>PDF Conversion Options</h3>
                         <div class="row row-cols-1">
                             <div class="col mb-3">
                                 <label for="pageOrientation" class="form-label">Page Orientation</label>
@@ -159,13 +199,13 @@
 
                         <div class="d-block mt-2 mb-2">
                             <button id="convertBtn" class="btn btn-primary btn-md w-100 rounded-2 shadow-sm mb-2" onclick="ga_send_event('convert_to_pdf')">
-                                <i class="fas fa-file-pdf me-2"></i> Convert to PDF
+                                <i class="bi bi-file-earmark-pdf me-2"></i> Convert to PDF
                             </button>
                             <button id="downloadBtn" class="btn btn-success btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;" onclick="ga_send_event('download_pdf')">
-                                <i class="fas fa-download me-2"></i> Download PDF
+                                <i class="bi bi-download me-2"></i> Download PDF
                             </button>
                             <button id="resetBtn" class="btn btn-outline-danger btn-md w-100 rounded-2 shadow-sm mb-2" style="display: none;" onclick="ga_send_event('reset_click')">
-                                <i class="fas fa-trash-alt me-2"></i> Reset
+                                <i class="bi bi-trash me-2"></i> Reset
                             </button>
                         </div>
 
@@ -196,12 +236,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-file-pdf"></i>
+                            <i class="bi bi-file-earmark-pdf"></i>
                         </div>
                         <h3>High Quality PDFs</h3>
                         <p>Convert your images to PDF without losing image quality and create high-resolution PDF documents that maintain perfect quality for printing and sharing.</p>
                         <div class="d-flex align-items-center text-primary">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>Supports jpg, jpeg, png, webp, gif, and more image formats.</small>
                         </div>
                     </div>
@@ -210,12 +250,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card highlight-card floating">
                         <div class="feature-icon">
-                            <i class="fas fa-layer-group"></i>
+                            <i class="bi bi-layers"></i>
                         </div>
                         <h3>Batch Processing</h3>
                         <p>Convert unlimited images into PDF, Our tool supports multiple image conversion that efficiently converts your pictures into pdf.</p>
                         <div class="d-flex align-items-center text-white">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>Recommended to convert 30 images at once for normal devices.</small>
                         </div>
                     </div>
@@ -224,12 +264,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="bi bi-phone"></i>
                         </div>
                         <h3>Mobile Friendly</h3>
                         <p>Our jpg to pdf converter tool is optimized for all devices. This tool works on devices like desktops, mobiles, tablets, etc., to enjoy the best user experience during conversion.</p>
                         <div class="d-flex align-items-center text-primary">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>Works on any device</small>
                         </div>
                     </div>
@@ -238,12 +278,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-lock"></i>
+                            <i class="bi bi-lock"></i>
                         </div>
                         <h3>Secure Processing</h3>
                         <p>Your files are processed securely in your browser. We don't store your files on our servers, which means complete privacy for your documents and images.</p>
                         <div class="d-flex align-items-center text-primary">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>100% client-side processing</small>
                         </div>
                     </div>
@@ -252,12 +292,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-sliders-h"></i>
+                            <i class="bi bi-sliders"></i>
                         </div>
                         <h3>Arrange & Customize</h3>
                         <p>Re-order selected images and adjust page size, orientation, margins, background color, and image position to create the perfect PDF for your needs.</p>
                         <div class="d-flex align-items-center text-primary">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>Customize the PDF setting before converting.</small>
                         </div>
                     </div>
@@ -266,12 +306,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-dollar-sign"></i>
+                            <i class="bi bi-currency-dollar"></i>
                         </div>
                         <h3>Fast and Free</h3>
                         <p>Our jpg to pdf converter is optimized to convert your unlimited images into pdf quickly. Convert unlimited images for free.</p>
                         <div class="d-flex align-items-center text-primary">
-                            <i class="fas fa-check-circle me-2"></i>
+                            <i class="bi bi-check-circle me-2"></i>
                             <small>Up to 5x faster than competitors and 100% Free.</small>
                         </div>
                     </div>
@@ -283,19 +323,19 @@
         <section id="howToConvert" class="py-5">
             <div class="how-to-card">
                 <div class="floating-icons">
-                    <i class="floating-icon fas fa-file-pdf" style="top: 10%; left: 5%; font-size: 30px; animation-delay: 0s;"></i>
-                    <i class="floating-icon fas fa-image" style="top: 20%; left: 80%; font-size: 25px; animation-delay: 2s;"></i>
-                    <i class="floating-icon fas fa-cloud-upload-alt" style="top: 60%; left: 10%; font-size: 35px; animation-delay: 4s;"></i>
-                    <i class="floating-icon fas fa-download" style="top: 70%; left: 85%; font-size: 28px; animation-delay: 6s;"></i>
+                    <i class="floating-icon bi bi-file-earmark-pdf" style="top: 10%; left: 5%; font-size: 30px; animation-delay: 0s;"></i>
+                    <i class="floating-icon bi bi-image" style="top: 20%; left: 80%; font-size: 25px; animation-delay: 2s;"></i>
+                    <i class="floating-icon bi bi-cloud-arrow-up" style="top: 60%; left: 10%; font-size: 35px; animation-delay: 4s;"></i>
+                    <i class="floating-icon bi bi-download" style="top: 70%; left: 85%; font-size: 28px; animation-delay: 6s;"></i>
                 </div>
                 
                 <div class="card-header">
-                    <h2><i class="fas fa-magic me-2"></i> How to Convert JPG to PDF?</h2>
+                    <h2><i class="bi bi-magic me-2"></i> How to Convert JPG to PDF?</h2>
                 </div>
                 
                 <div class="card-body">
                     <div class="how-to-badge">
-                        <i class="fas fa-bolt me-1"></i> Super Easy Steps
+                        <i class="bi bi-lightning-charge me-1"></i> Super Easy Steps
                     </div>
 
                     <p class="mb-4">Our online <strong>jpg to pdf</strong> converter is easy to use. Follow these 3 steps to convert your images to pdf.</p>
@@ -331,9 +371,9 @@
                     <div class="cta-section">
                         <h4 class="mb-4">Ready to Convert Images into PDF?</h4>
                         <button class="cta-btn" onclick="document.getElementById('selectImagesBtn').click();window.scrollTo({top: 0,behavior: 'smooth'})">
-                            <span><i class="fas fa-play me-2"></i> Start Converting Now</span>
+                            <span><i class="bi bi-play me-2"></i> Start Converting Now</span>
                         </button>
-                        <p class="mt-3 text-muted"><i class="fas fa-lock me-1"></i> Your files are processed securely and never stored</p>
+                        <p class="mt-3 text-muted"><i class="bi bi-lock me-1"></i> Your files are processed securely and never stored</p>
                     </div>
                 </div>
             </div>
@@ -347,7 +387,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="fas fa-file-pdf me-2"></i>JPGintoPDF</h5>
+                    <h5><i class="bi bi-file-earmark-pdf me-2"></i>JPGintoPDF</h5>
                     <p>A simple tool to convert your images to PDF files right in your browser. No server processing needed.</p>
                 </div>
                 <div class="col-md-3">
@@ -362,9 +402,9 @@
                 <div class="col-md-3">
                     <h5>Connect</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://github.com/jpgintopdf/jpgintopdf.github.io"><i class="fab fa-github me-2"></i>GitHub</a></li>
-                        <li><a href="https://x.com/" rel="nofollow"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
-                        <li><a href="https://www.facebook.com/" rel="nofollow"><i class="fab fa-facebook me-2"></i>Facebook</a></li>
+                        <li><a href="https://github.com/jpgintopdf/jpgintopdf.github.io"><i class="bi bi-github me-2"></i>GitHub</a></li>
+                        <li><a href="https://x.com/" rel="nofollow"><i class="bi bi-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="https://www.facebook.com/" rel="nofollow"><i class="bi bi-facebook me-2"></i>Facebook</a></li>
                         <li><a href="https://telegra.ph/Freecashcom-Review-A-Legit-Way-to-Earn-Money-Online-04-18">FreeCash.com</a></li>
                         <li><a href="https://rentry.co/best-link-in-bio-website-and-oinline-tools">Rentry.co</a></li>
                     </ul>
