@@ -79,7 +79,7 @@ body {
     background-color: rgba(67, 97, 238, 0.05);
 }
 
-.drop-area .fa-cloud-upload-alt {
+.drop-area .drop-icon {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
