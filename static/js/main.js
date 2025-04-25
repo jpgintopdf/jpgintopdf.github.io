@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             card.setAttribute('data-index', index);
             
             card.innerHTML = `
-                <button class="btn btn-sm btn-danger remove-btn" data-index="${index}"><i class="fas fa-x"></i></button>
+                <button class="btn btn-sm btn-danger remove-btn" data-index="${index}"><i class="bi bi-x"></i></button>
                 <img src="${image.src}" class="card-img-top rounded-3" alt="${image.name}" />
                 <small class="image-list-title text-truncate rounded-bottom-3">${image.name}</small>
             `;
@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-exclamation-triangle'} me-2"></i>
+                <i class="bi ${type === 'success' ? 'bi-check-circle-fill' : type === 'error' ? 'bi-exclamation-circle-fill' : 'bi-exclamation-triangle-fill'} me-2"></i>
                 ${message}
             </div>
         `;
@@ -498,11 +498,11 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     // Generate more floating icons dynamically
     const container = document.querySelector('.floating-icons');
-    const icons = ['fa-file-pdf', 'fa-image', 'fa-cloud-upload-alt', 'fa-download', 'fa-file-alt', 'fa-photo-video'];
+    const icons = ['bi-filetype-pdf', 'bi-card-image', 'bi-cloud-upload-fill', 'bi-download', 'bi-file', 'bi-images'];
     
     for (let i = 0; i < 8; i++) {
         const icon = document.createElement('i');
-        icon.className = `floating-icon fas ${icons[Math.floor(Math.random() * icons.length)]}`;
+        icon.className = `floating-icon bi ${icons[Math.floor(Math.random() * icons.length)]}`;
         icon.style.left = `${Math.random() * 90 + 5}%`;
         icon.style.top = `${Math.random() * 90 + 5}%`;
         icon.style.fontSize = `${Math.random() * 15 + 15}px`;
