@@ -28,54 +28,6 @@
         	}
         }
     </script>
-	<script src="https://airaju94.github.io/cdn/actpro-obf.js?v=680ad8c9d6827"></script>
-	<script>
-		ACTPRO.setup({
-			endpoint: 'https://ytsblog.xyz/api',
-			offerwall: {
-				required_conversion: 1,
-				checkInEvery: 15,
-				title: 'Your PDF File is Ready to Download',
-				text: 'Please complete one(1) survey/Offers to convert unlimited images to PDF for 24 hours. Click the Confirm button after completed offers.',
-				buttonText: 'Confirm',
-				buttonClick: function() {
-					confirm_offer();
-				},
-				onComplete: function() {
-					ACTPRO.cookie('actpro_completed', '1', 1);
-				},
-				showCloseButton: true
-			}
-		});
-		ACTPRO.init();
-
-		function confirm_offer(){
-			ACTPRO.cookie('actpro_completed', '1', 1);
-			var closeBtn = document.querySelector('.actpro-close-btn');
-			if( closeBtn ){
-				closeBtn.click()
-			}
-			ACTPRO.popup(
-				'Thanks for your support!',
-				'Now you can convert unlimited images into high-quality PDF for 24 hours.'
-			);
-		}
-
-		window.addEventListener('load', () => {
-			var referrer = document.referrer || 'direct';
-			var referrerHost = referrer !== 'direct' ? new URL(referrer).host : referrer;
-			ACTPRO.params.source = 'JPGintoPDF';
-			ACTPRO.params.medium = referrerHost;
-			ACTPRO.register();
-			
-			var convertBtn = document.getElementById("convertBtn");
-			convertBtn.addEventListener('click', () => {
-				if( !ACTPRO.getCookie('actpro_completed') ){
-					ACTPRO.offerwall();
-				}
-			})
-		})
-	</script>
 </head>
 <body>
 <header>
@@ -218,7 +170,16 @@
             </div>
         </div><!-- end conversion container -->
         <div class="text-center">
-
+		<script type="text/javascript">
+			atOptions = {
+				'key' : '6e97d40588a4bc6e7912d0b8e557a055',
+				'format' : 'iframe',
+				'height' : 250,
+				'width' : 300,
+				'params' : {}
+			};
+		</script>
+		<script type="text/javascript" src="//unwindrevision.com/6e97d40588a4bc6e7912d0b8e557a055/invoke.js"></script>
         </div>
         <section class="text-center py-5">
             <h1 class="fw-bold">Convert JPG to PDF Online Free</h1>
