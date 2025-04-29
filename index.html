@@ -427,12 +427,6 @@
 	<script>
 		function adYan(){const e=setInterval((()=>{if("undefined"!=typeof Ya&&Ya.Context&&Ya.Context.AdvManager){clearInterval(e);const a=Array.from(document.querySelectorAll('[id^="yandex_rtb_"]')).map((e=>({elementId:e.id,blockId:e.id.replace("yandex_rtb_","")}))),t=()=>{a.forEach((e=>{try{Ya.Context.AdvManager.render({blockId:e.blockId,renderTo:e.elementId})}catch(e){console.error("Yandex ad error:",e)}}))};t();const n=()=>{t(),ga_send_event("Yan_ads"),setTimeout(n,Math.floor(15e3*Math.random())+15e3)};setTimeout(n,Math.floor(15e3*Math.random())+15e3)}}),100)}adYan();
 	</script>
-	<script type="text/javascript">
-	   var uid = '278037';
-	   var wid = '738928';
-	   var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
-	   pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
-	</script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-06MZTCRJXZ"></script>
     <script>
