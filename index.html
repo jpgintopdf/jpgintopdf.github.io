@@ -425,7 +425,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
     <script src="https://jpgintopdf.github.io/static/js/main.min.js?v=67ebbac8a4414"></script>
 	<script>
-		function adYan(){const e=setInterval((()=>{if("undefined"!=typeof Ya&&Ya.Context&&Ya.Context.AdvManager){clearInterval(e);const a=Array.from(document.querySelectorAll('[id^="yandex_rtb_"]')).map((e=>({elementId:e.id,blockId:e.id.replace("yandex_rtb_","")}))),t=()=>{a.forEach((e=>{try{Ya.Context.AdvManager.render({blockId:e.blockId,renderTo:e.elementId})}catch(e){console.error("Yandex ad error:",e)}}))};t();const n=()=>{t(),ga_send_event("Yan_ads"),setTimeout(n,Math.floor(15e3*Math.random())+15e3)};setTimeout(n,Math.floor(15e3*Math.random())+15e3)}}),100)}
+		function adYan(){const e=setInterval((()=>{if("undefined"!=typeof Ya&&Ya.Context&&Ya.Context.AdvManager){clearInterval(e);const a=Array.from(document.querySelectorAll('[id^="yandex_rtb_"]')).map((e=>({elementId:e.id,blockId:e.id.replace("yandex_rtb_","")}))),t=()=>{a.forEach((e=>{try{Ya.Context.AdvManager.render({blockId:e.blockId,renderTo:e.elementId})}catch(e){console.error("Yandex ad error:",e)}}))};t();const n=()=>{t(),ga_send_event("Yan_ads"),setTimeout(n,Math.floor(15e3*Math.random())+15e3)};setTimeout(n,Math.floor(15e3*Math.random())+15e3)}}),100)}adYan();
 	</script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-06MZTCRJXZ"></script>
