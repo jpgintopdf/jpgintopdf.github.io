@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>EarnSmart Survey - Discover Your Online Income Potential</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="EarnSmart Survey - Discover Your Online Income Potential">
+    <meta name="description" content="Take our quick 5-minute survey and discover your online earning potential. Join 50,000+ people who found their path to $5,000+ per month. Get personalized results free.">
+    <meta name="keywords" content="online earning, make money online, side hustle, work from home, online survey, passive income, freelance, dropshipping, affiliate marketing">
+    <meta name="author" content="EarnSmart">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EarnSmart Survey - Discover Your Online Income Potential">
+    <meta property="og:description" content="Take our quick 5-minute survey and discover your online earning potential. Join 50,000+ people who found their path to $5,000+ per month.">
+    <meta property="og:site_name" content="EarnSmart Survey">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="EarnSmart Survey - Discover Your Online Income Potential">
+    <meta property="twitter:description" content="Take our quick 5-minute survey and discover your online earning potential. Join 50,000+ people who found their path to $5,000+ per month.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+	
+	<!-- Yandex.RTB -->
+	<script>window.yaContextCb=window.yaContextCb||[]</script>
+	<script src="https://yandex.ru/ads/system/context.js" async></script>
+
+    <!-- Bootstrap CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fa;
+            color: #1e293b;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            body { font-size: 13px; }
+            h1 { font-size: 1.5rem !important; }
+            h2 { font-size: 1.25rem !important; }
+            h3 { font-size: 1.1rem !important; }
+            h4 { font-size: 1rem !important; }
+            h5 { font-size: 0.9rem !important; }
+            .lead { font-size: 0.9rem !important; }
+            .display-3 { font-size: 2rem !important; }
+            .btn { font-size: 0.9rem !important; }
+        }
+        .navbar {
+            background: white !important;
+            border-bottom: 1px solid #e9eef2;
+            padding: 0.5rem 0;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #0d6efd !important;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #475569 !important;
+            padding: 0.25rem 0.75rem !important;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .hero-section {
+            background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+            border-radius: 16px;
+            padding: 10px;
+            border: 1px solid #e9eef2;
+        }
+        .badge-soft {
+            background: #e7f1ff;
+            color: #0d6efd;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+        }
+        .survey-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            border: 1px solid #e9eef2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .progress {
+            height: 6px;
+            border-radius: 50px;
+            background: #e9eef2;
+        }
+        .progress-bar {
+            background: #0d6efd;
+            border-radius: 50px;
+        }
+        .option-btn {
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            margin: 0.35rem 0;
+            border: 2px solid #e9eef2;
+            border-radius: 12px;
+            background: white;
+            font-weight: 500;
+            color: #1e293b;
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .option-btn:hover {
+            border-color: #0d6efd;
+            background: #f8faff;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            border: 1px solid #e9eef2;
+            margin-top: 20px;
+        }
+        .blog-card h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+        .blog-card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+        .blog-card strong {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        .footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+        }
+        .footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: white;
+        }
+        .progress-text {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #64748b;
+        }
+        .container {
+            max-width: 1140px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        @media (max-width: 768px) {
+            .hero-section { padding: 1rem; }
+            .survey-card { padding: 1rem; }
+            .blog-card { padding: 1rem; }
+            .option-btn { padding: 0.6rem 0.75rem; }
+        }
+        .result-highlight {
+            background: linear-gradient(145deg, #0d6efd, #0b5ed7);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+        }
+        .dropdown-menu {
+            min-width: 120px;
+        }
+        .dropdown-item button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 0.25rem 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="?id=1">
+            <i class="bi bi-graph-up-arrow text-primary me-2"></i>EarnSmart
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="?id=1">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="?id=1">Take Survey</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Success Stories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Free Tools</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <i class="bi bi-translate"></i> EN
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><button class="dropdown-item" onclick="setLanguage('en')">🇺🇸 English</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+	<div class="my-1 text-center">
+		<!-- Yandex.RTB R-A-14966754-1 -->
+		<div id="yandex_rtb_R-A-14966754-1"></div>
+		<script>
+		window.yaContextCb.push(() => {
+			Ya.Context.AdvManager.render({
+				"blockId": "R-A-14966754-1",
+				"renderTo": "yandex_rtb_R-A-14966754-1"
+			})
+		})
+		</script>
+	</div>
+    <div class="hero-section my-2">
+        <div id="surveyContainer"></div>
+    </div>
+	<div class="my-1 text-center">
+		<!-- Yandex.RTB R-A-14966754-2 -->
+		<div id="yandex_rtb_R-A-14966754-2"></div>
+		<script>
+		window.yaContextCb.push(() => {
+			Ya.Context.AdvManager.render({
+				"blockId": "R-A-14966754-2",
+				"renderTo": "yandex_rtb_R-A-14966754-2"
+			})
+		})
+		</script>
+	</div>
+    <div id="blogContainer" class="my-1"></div>
+	<div class="my-1 text-center">
+		<!-- Yandex.RTB R-A-14966754-3 -->
+		<div id="yandex_rtb_R-A-14966754-3"></div>
+		<script>
+		window.yaContextCb.push(() => {
+			Ya.Context.AdvManager.render({
+				"blockId": "R-A-14966754-3",
+				"renderTo": "yandex_rtb_R-A-14966754-3"
+			})
+		})
+		</script>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 mb-3 mb-md-0">
+                <h5 class="text-white mb-2 small"><i class="bi bi-graph-up-arrow me-2"></i>EarnSmart</h5>
+                <p class="small">EarnSmart helps ordinary people find legitimate online income opportunities. Our surveys match you with the right path.</p>
+            </div>
+            <div class="col-md-3 mb-3 mb-md-0">
+                <h6 class="text-white mb-2 small">Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-1"><a href="#">Privacy</a></li>
+                    <li class="mb-1"><a href="#">Terms</a></li>
+                    <li class="mb-1"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h6 class="text-white mb-2 small">Trusted By</h6>
+                <p class="small mb-1"><i class="bi bi-people-fill me-2"></i>50,000+ survey takers</p>
+                <p class="small"><i class="bi bi-star-fill text-warning me-2"></i>4.8/5 rating from users</p>
+            </div>
+        </div>
+        <hr class="my-3 bg-secondary">
+        <div class="text-center small">
+            © 2025 EarnSmart. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Yandex.RTB R-A-14966754-7 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14966754-7",
+        "type": "floorAd",
+        "platform": "touch"
+    })
+})
+</script>
+<!-- Yandex.RTB R-A-14966754-5 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-14966754-5",
+        "type": "fullscreen",
+        "platform": "touch"
+    })
+})
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Configuration
+    const PIXEL = 'https://actpro.xyz/t/airpx-s2s?click_id={click_id}&payout={payout}&pixel=1x1';
+    const CTA_LINK = 'https://t.co/5d03k56hwm';
+    
+    // Translations
+    const TRANSLATIONS = {
+        en: {
+            site_title: 'EarnSmart Survey - Discover Your Online Income Potential',
+            hero_badge: '⚡ 2 min survey • 100% free',
+            hero_title: 'Do you want to make $5,000+ per month?',
+            hero_sub: 'Join 50,000+ people who discovered their online earning potential. Complete this short survey and get a personalized income roadmap.',
+            survey_title: 'Quick Assessment (Step {current} of {total})',
+            signup_cta: 'Create Free Account & Start Earning',
+            signup_sub: 'No credit card required • Instant access',
+            result_title: '🎉 Great news! Based on your answers...',
+            result_per_month: 'per month within 3-6 months',
+            result_tip: 'Create your free account to get a step-by-step plan tailored to you.',
+            q1: 'What is your gender?',
+            q2: 'What is your age group?',
+            q3: 'How many people in your household?',
+            q4: 'What is your current job status?',
+            q5: 'How much would you like to earn per month?',
+            q6: 'Which online method interests you most?',
+            q7: 'How many hours weekly can you dedicate?',
+            q8: 'Do you have online earning experience?',
+            q9: 'What device do you mainly use?',
+            q10: 'What is your main motivation?',
+            male: '👨 Male',
+            female: '👩 Female',
+            other: '🔄 Other',
+            age_18_25: '18-25 (College/Starting out)',
+            age_26_35: '26-35 (Building career)',
+            age_36_50: '36-50 (Established)',
+            age_50plus: '50+ (Experienced)',
+            house_1: '🏠 Just me',
+            house_2: '👥 2 people',
+            house_3: '👨‍👩‍👧 3-4 people',
+            house_5: '👨‍👩‍👧‍👦 5+ people',
+            job_full: '💼 Employed full-time',
+            job_part: '🕒 Employed part-time',
+            job_student: '📚 Student',
+            job_home: '🏡 Homemaker',
+            job_unemployed: '🔍 Looking for work',
+            job_retired: '🌅 Retired',
+            earn_100: '$100/month (Extra cash)',
+            earn_1000: '$1,000/month (Side hustle)',
+            earn_5000: '$5,000/month (Part-time income)',
+            earn_10000: '$10,000/month (Full-time)',
+            earn_100k: '$100,000+/month (Freedom)',
+            interest_freelance: '✍️ Freelancing (writing, design, coding)',
+            interest_affiliate: '🔗 Affiliate marketing',
+            interest_ecom: '🛍️ E-commerce / Dropshipping',
+            interest_content: '📹 Content creation (YouTube, TikTok)',
+            interest_survey: '📝 Paid surveys & micro tasks',
+            time_1_5: '1-5 hours/week (Casual)',
+            time_5_10: '5-10 hours/week (Consistent)',
+            time_10_20: '10-20 hours/week (Serious)',
+            time_20plus: '20+ hours/week (Dedicated)',
+            exp_yes: '✅ Yes, I have experience',
+            exp_no: '🌱 No, but I\'m ready to learn',
+            device_mobile: '📱 Smartphone',
+            device_laptop: '💻 Laptop/Desktop',
+            device_tablet: '📟 Tablet',
+            motive_debt: '💰 Pay off debt',
+            motive_extra: '🛍️ Extra spending money',
+            motive_save: '🏦 Save for a goal',
+            motive_freedom: '🦅 Financial freedom',
+            motive_career: '🚀 Career change'
+        }
+    };
+    
+    // Questions Array
+    const QUESTIONS = {
+        1: { text: 'q1', options: ['male', 'female', 'other'] },
+        2: { text: 'q2', options: ['age_18_25', 'age_26_35', 'age_36_50', 'age_50plus'] },
+        3: { text: 'q3', options: ['house_1', 'house_2', 'house_3', 'house_5'] },
+        4: { text: 'q4', options: ['job_full', 'job_part', 'job_student', 'job_home', 'job_unemployed', 'job_retired'] },
+        5: { text: 'q5', options: ['earn_100', 'earn_1000', 'earn_5000', 'earn_10000', 'earn_100k'] },
+        6: { text: 'q6', options: ['interest_freelance', 'interest_affiliate', 'interest_ecom', 'interest_content', 'interest_survey'] },
+        7: { text: 'q7', options: ['time_1_5', 'time_5_10', 'time_10_20', 'time_20plus'] },
+        8: { text: 'q8', options: ['exp_yes', 'exp_no'] },
+        9: { text: 'q9', options: ['device_mobile', 'device_laptop', 'device_tablet'] },
+        10: { text: 'q10', options: ['motive_debt', 'motive_extra', 'motive_save', 'motive_freedom', 'motive_career'] }
+    };
+    
+    // Blog Posts
+    const BLOG_POSTS = {
+        1: { title: 'Your Gender and Online Earning: Why It Doesn\'t Matter (But Your Strengths Do)', content: '<p>Here\'s the truth: The internet doesn\'t care if you\'re male, female, or non-binary. It only cares about the value you provide. But understanding your natural strengths can help you choose the right path.</p><p><strong>For everyone:</strong> Online earning is booming. In 2024, the gig economy grew by 27%. Women are dominating in freelance writing, virtual assistance, and social media management. Men often lean towards tech support, dropshipping, and affiliate marketing. But these are just trends – not rules.</p><p><strong>If you\'re male:</strong> Your analytical mind might love data entry, cryptocurrency trading, or starting a blog about sports or tech. Many men earn $3,000-$5,000/month reviewing products on YouTube.</p><p><strong>If you\'re female:</strong> Your communication skills are gold. Successful female entrepreneurs run Etsy shops, teach online courses, and manage influencer accounts. One mom of three started a parenting blog that now makes $8,000/month.</p><p><strong>The bottom line:</strong> Your gender doesn\'t limit you. What matters is consistency. People who stick with online work for 6 months see average earnings of $1,200/month. After 1 year, that jumps to $3,500. After this survey, we\'ll match you with opportunities where your natural talents shine. Keep going – you\'re just getting started!</p>' },
+        2: { title: 'Age and Online Income: It\'s Never Too Late (or Too Early) to Start', content: '<p>Think you\'re too young or too old to earn online? Think again. The beauty of the internet is that it welcomes everyone.</p><p><strong>18-25 years old:</strong> You\'re a digital native. You understand trends, apps, and social media intuitively. This is your superpower. Many in your age group earn $500-$2,000/month through TikTok creativity program, freelance graphic design, or selling vintage clothes on Depop.</p><p><strong>26-35 years old:</strong> You have focus and drive. This is prime time for building serious income streams. Affiliate marketing, dropshipping, and online coaching work well here.</p><p><strong>36-50 years old:</strong> You have life experience and professional skills. Consulting, online courses, and niche blogging are perfect.</p><p><strong>50+ years old:</strong> You have wisdom and patience. Many successful bloggers and YouTubers started after 50.</p><p>The key is to start now. Age is just experience in disguise. Complete this survey and we\'ll show you proven paths for your age group.</p>' },
+        3: { title: 'Household Size: Turn Your Family Into Your Online Team', content: '<p>Living alone or with a big family? Both have advantages for online earning. Let\'s break down how your household size can actually help you make more money.</p><p><strong>Living alone:</strong> You have peace and quiet. No distractions. This is perfect for deep work like coding, writing, or video editing.</p><p><strong>2 people:</strong> You have a built-in partner. Couples often run successful YouTube channels together.</p><p><strong>3-4 people:</strong> This is a small team. Kids can help with simple tasks (with supervision).</p><p><strong>5+ people:</strong> You have a workforce! Delegate tasks. Many successful family businesses started this way.</p><p>No matter your household size, you can earn. After this survey, we\'ll give you strategies that fit your living situation.</p>' },
+        4: { title: 'Your Current Job: The Perfect Launchpad for Online Income', content: '<p>Whether you\'re employed, a student, or retired, your current situation gives you advantages for online earning. Let\'s explore how to use them.</p><p><strong>Employed full-time:</strong> You have steady income and benefits. This means you can invest in courses, tools, and ads without pressure.</p><p><strong>Employed part-time:</strong> You have more free time. Use it to build something bigger.</p><p><strong>Student:</strong> You have flexibility and energy. Plus, you\'re surrounded by peers who might become customers.</p><p><strong>Homemaker:</strong> You\'re a master of multitasking and organization. These are perfect for virtual assistant jobs.</p><p><strong>Looking for work:</strong> You have time to dedicate. Use it wisely. Start with paid surveys for immediate cash while building a skill.</p><p><strong>Retired:</strong> You have wisdom and patience. Share your knowledge through consulting, writing e-books, or starting a YouTube channel.</p>' },
+        5: { title: 'Your Monthly Income Goal: Dream Big, Start Smart', content: '<p>Let\'s talk about money. How much do you really want to earn online? Your answer helps us find your perfect path.</p><p><strong>$100/month:</strong> This is the easiest goal. You can achieve this with paid surveys, micro-tasks, or selling unused items online.</p><p><strong>$1,000/month:</strong> This is serious side hustle territory. You\'ll need consistent effort – about 10-15 hours weekly.</p><p><strong>$5,000/month:</strong> Now we\'re talking part-time income that rivals a full-time job. This requires skill or scale.</p><p><strong>$10,000/month:</strong> This is full-time online income. You\'re either highly skilled or have built assets like courses.</p><p><strong>$100,000+/month:</strong> This is entrepreneurial territory. You\'re building a business, not just a job.</p><p>Your goal tells us which path to recommend. Complete the survey and we\'ll map out your journey.</p>' },
+        6: { title: 'Choose Your Online Earning Method: Find What Fits You Best', content: '<p>There are dozens of ways to earn online. Which one sounds exciting to you? Let\'s break down the most popular options.</p><p><strong>Freelancing:</strong> Perfect if you have a skill to sell. Beginners can earn $15-$30/hour.</p><p><strong>Affiliate marketing:</strong> You promote products and earn commissions. Top affiliates earn $10,000+/month.</p><p><strong>E-commerce / Dropshipping:</strong> Sell products online without holding inventory. Successful stores make $1,000-$20,000/month.</p><p><strong>Content creation:</strong> Entertain or educate people. Grow an audience and monetize through ads and sponsorships.</p><p><strong>Paid surveys & micro tasks:</strong> The easiest way to start. You can reliably earn $100-$300/month in spare time.</p>' },
+        7: { title: 'Time Commitment: How Many Hours Can You Give?', content: '<p>Time is your most valuable asset. How much can you realistically dedicate each week? Let\'s see what\'s possible with different time investments.</p><p><strong>1-5 hours/week:</strong> Focus on low-effort methods: paid surveys, micro tasks. You can earn $100-$200/month.</p><p><strong>5-10 hours/week:</strong> With 1-2 hours daily, you can build something real. Many people earn $500-$1,500/month.</p><p><strong>10-20 hours/week:</strong> This is where things get exciting. You can bring $2,000-$5,000/month.</p><p><strong>20+ hours/week:</strong> You\'re essentially working full-time online. This can replace a regular job.</p><p>Your time availability determines your timeline. Keep going!</p>' },
+        8: { title: 'Online Experience: Everyone Starts Somewhere', content: '<p>Have you earned money online before? Your answer helps us calibrate your starting point.</p><p><strong>If you have experience:</strong> Great! You already know the basics. You can aim higher from day one.</p><p><strong>If you\'re new:</strong> Welcome! Everyone was a beginner once. The online world is actually very beginner-friendly. Start with small wins – complete a few surveys, write your first freelance proposal.</p><p>Your experience level doesn\'t determine your success – your attitude does.</p>' },
+        9: { title: 'Your Device: You Already Have Everything You Need', content: '<p>Think you need expensive equipment to earn online? Think again. Whatever device you have right now can be your money-making tool.</p><p><strong>Smartphone only:</strong> You can do more with a phone than you realize. Answer surveys, manage social media accounts, even run an entire e-commerce store.</p><p><strong>Laptop/Desktop:</strong> This gives you more options. You can write articles, design graphics, edit videos, code websites.</p><p><strong>Tablet:</strong> You have a nice middle ground. Great for digital art, note-taking, and light content creation.</p><p>Start with what you have. As you earn, you can upgrade.</p>' },
+        10: { title: 'Your Motivation: The Fuel That Will Make You Succeed', content: '<p>This is the most important question. Why do you really want to earn online? Your motivation will keep you going when things get tough.</p><p><strong>Pay off debt:</strong> Debt is stressful, but it\'s also powerful motivation. Every dollar earned brings you closer to freedom.</p><p><strong>Extra spending money:</strong> You want life\'s little luxuries without guilt. This makes the work feel fun.</p><p><strong>Save for a goal:</strong> Visualize that goal daily. Every small earning brings you closer.</p><p><strong>Financial freedom:</strong> You want to escape the rat race. This requires building assets that generate income while you sleep.</p><p><strong>Career change:</strong> You want to do something meaningful. Online skills can lead to new careers.</p><p>Your motivation is your engine. Write it down. Remember it!</p>' }
+    };
+    
+    let currentLang = 'en';
+    
+    function getTranslation(key) {
+        return TRANSLATIONS[currentLang][key] || key;
+    }
+    
+    function getCurrentQuestion() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const idParam = urlParams.get('id');
+        if (idParam && !isNaN(parseInt(idParam))) {
+            let q = parseInt(idParam);
+            if (q >= 1 && q <= 10) {
+                return q;
+            }
+        }
+        return 1;
+    }
+    
+    function getAnswers() {
+        const answers = localStorage.getItem('survey_answers');
+        return answers ? JSON.parse(answers) : {};
+    }
+    
+    function saveAnswer(questionNum, answer) {
+        const answers = getAnswers();
+        answers[questionNum] = answer;
+        localStorage.setItem('survey_answers', JSON.stringify(answers));
+    }
+    
+    function isSurveyComplete() {
+        const answers = getAnswers();
+        return Object.keys(answers).length >= 10;
+    }
+    
+    function calculateEarnings() {
+        const answers = getAnswers();
+        const goal = answers[5] || 'earn_100';
+        const time = answers[7] || 'time_1_5';
+        const exp = answers[8] || 'exp_no';
+        
+        const goalMap = { earn_100: 100, earn_1000: 1000, earn_5000: 5000, earn_10000: 10000, earn_100k: 20000 };
+        const timeMap = { time_1_5: 50, time_5_10: 300, time_10_20: 800, time_20plus: 2000 };
+        
+        let base = goalMap[goal] || 500;
+        let extra = timeMap[time] || 100;
+        let potential = base + extra;
+        if (exp === 'exp_yes') potential = Math.round(potential * 1.2);
+        
+        return potential.toLocaleString();
+    }
+    
+    function renderSurvey() {
+        const currentQ = getCurrentQuestion();
+        const surveyComplete = isSurveyComplete();
+        const totalQ = 10;
+        const surveyContainer = document.getElementById('surveyContainer');
+        
+        if (surveyComplete) {
+            const earnings = calculateEarnings();
+            surveyContainer.innerHTML = `
+                <div class="survey-card">
+                    <div class="text-center">
+                        <div class="display-3 mb-3">💰</div>
+                        <h2 class="fw-bold">${getTranslation('result_title')}</h2>
+                        <p class="lead">$ ${earnings} ${getTranslation('result_per_month')}</p>
+                        <p class="text-muted">${getTranslation('result_tip')}</p>
+                        <div class="d-grid gap-2 col-8 mx-auto">
+                            <button onclick="handleCTA()" class="btn btn-primary btn-md py-3"><i class="bi bi-person-plus"></i> ${getTranslation('signup_cta')}</button>
+                            <small class="text-muted"><i class="bi bi-shield-check"></i> ${getTranslation('signup_sub')}</small>
+                        </div>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+        
+        // Show hero section only on first question
+        if (currentQ === 1) {
+            surveyContainer.innerHTML = `
+                <div class="badge-soft">
+                    <i class="bi bi-clock-history me-2"></i>${getTranslation('hero_badge')}
+                </div>
+                <h1 class="h4 fw-bold mb-2">${getTranslation('hero_title')}</h1>
+                <p class="text-secondary mb-3 small">${getTranslation('hero_sub')}</p>
+                <div class="survey-card">
+                    ${renderQuestionForm(currentQ, totalQ)}
+                </div>
+            `;
+        } else {
+            surveyContainer.innerHTML = `
+                <div class="survey-card">
+                    ${renderQuestionForm(currentQ, totalQ)}
+                </div>
+            `;
+        }
+    }
+    
+    function renderQuestionForm(currentQ, totalQ) {
+        const qData = QUESTIONS[currentQ];
+        if (!qData) return '<div>Question not found</div>';
+        
+        const qText = getTranslation(qData.text);
+        const options = qData.options;
+        const progressPercent = (currentQ / totalQ) * 100;
+        
+        let optionsHTML = '';
+        options.forEach(optKey => {
+            optionsHTML += `
+                <button type="button" class="option-btn" onclick="handleAnswer(${currentQ}, '${optKey}')">
+                    ${getTranslation(optKey) || optKey}
+                </button>
+            `;
+        });
+        
+        return `
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="progress-text">
+                    <i class="bi bi-question-circle me-1"></i>
+                    ${getTranslation('survey_title').replace('{current}', currentQ).replace('{total}', totalQ)}
+                </span>
+                <span class="progress-text">${Math.round(progressPercent)}%</span>
+            </div>
+            <div class="progress mb-3">
+                <div class="progress-bar" style="width: ${progressPercent}%"></div>
+            </div>
+            <h3 class="h5 fw-bold mb-3">${qText}</h3>
+            <div id="optionsContainer">
+                ${optionsHTML}
+            </div>
+        `;
+    }
+    
+    function renderBlog() {
+        const currentQ = getCurrentQuestion();
+        const surveyComplete = isSurveyComplete();
+        const totalQ = 10;
+        const blogContainer = document.getElementById('blogContainer');
+        
+        if (surveyComplete) {
+            blogContainer.innerHTML = `
+                <div class="blog-card">
+                    <h2 class="text-center h5">🎯 Your Next Steps</h2>
+                    <p class="text-center mb-3 small">You've completed the survey! Create your free account to get your complete roadmap with:</p>
+                    <div class="row g-2 small">
+                        <div class="col-md-4"><div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-2"></i> Step-by-step video guides</div></div>
+                        <div class="col-md-4"><div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-2"></i> Top 3 earning methods for you</div></div>
+                        <div class="col-md-4"><div class="d-flex align-items-center"><i class="bi bi-check-circle-fill text-success me-2"></i> Free tools & templates</div></div>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+        
+        if (BLOG_POSTS[currentQ]) {
+            const post = BLOG_POSTS[currentQ];
+			document.title = post.title;
+            blogContainer.innerHTML = `
+                <div class="blog-card">
+                    <h2><i class="bi bi-pencil-square text-primary me-2"></i>${post.title}</h2>
+                    <div class="blog-content">${post.content}</div>
+                    <div class="mt-3 p-2 bg-light rounded-3 small">
+                        <i class="bi bi-lightbulb text-warning me-2"></i>
+                        <strong>Keep going!</strong> You're ${currentQ} of ${totalQ} questions away from your personalized earning plan.
+                    </div>
+                </div>
+            `;
+        } else {
+            blogContainer.innerHTML = `
+                <div class="blog-card">
+                    <h2 class="h5"><i class="bi bi-newspaper me-2"></i>Success Stories</h2>
+                    <p class="small">Start the survey to see personalized tips and success stories tailored to your answers.</p>
+                </div>
+            `;
+        }
+    }
+    
+    function handleAnswer(questionNum, answerValue) {
+        // Save the answer
+        saveAnswer(questionNum, answerValue);
+        
+        // Trigger pixel on question 2
+        if (questionNum === 2) {
+            triggerPixel(PIXEL, 'click_id', '0');
+            ga_send_event('S_START');
+        }
+        
+        // Check if this was the last question
+        if (questionNum >= 10) {
+            // Survey complete - reload to show results
+            window.location.href = '?id=10';
+        } else {
+            // Redirect to next question
+            const nextQuestion = questionNum + 1;
+            window.location.href = `?id=${nextQuestion}`;
+        }
+    }
+    
+    function handleCTA() {
+        ga_send_event("CTA_CLICK");
+        window.location.href = CTA_LINK;
+    }
+    
+    function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('user_lang', lang);
+        renderSurvey();
+        renderBlog();
+    }
+    
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+    
+    function triggerPixel(pixelUrl, cookieName, payout = 0) {
+        const clickId = getCookie(cookieName);
+        if (!clickId) return false;
+        let finalUrl = pixelUrl.replace('{click_id}', clickId).replace('{payout}', payout);
+        const img = new Image(1, 1);
+        img.style.display = 'none';
+        img.src = finalUrl;
+        document.body.appendChild(img);
+        setTimeout(() => { if(img.parentNode) img.parentNode.removeChild(img); }, 1000);
+        return true;
+    }
+    
+    function ga_send_event(eventName) {
+        if (typeof gtag === 'function') {
+            gtag('event', eventName, { event_name: eventName });
+        }
+        console.log('Event:', eventName);
+    }
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('user_lang');
+        if (savedLang) currentLang = savedLang;
+        
+        renderSurvey();
+        renderBlog();
+    });
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-06MZTCRJXZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-06MZTCRJXZ');
+</script>
+</body>
+</html>
